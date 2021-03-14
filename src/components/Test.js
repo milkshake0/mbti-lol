@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Questions from "./shared/questions.json";
 import Answers from "./shared/answers.json";
 
