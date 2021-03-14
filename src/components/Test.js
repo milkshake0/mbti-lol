@@ -14,7 +14,7 @@ const Test = ({ match, history }) => {
   useEffect(() => {
     setCurrStep(+match.params.step);
   }, [match.params.step]);
-  console.log(currStep);
+  // console.log(currStep);
 
   useEffect(() => {
     if (isPush) sendPage();
@@ -38,13 +38,9 @@ const Test = ({ match, history }) => {
   };
 
   const sendPage = () => {
-    console.log("myAnswer: ", myAnswer);
+    // console.log("myAnswer: ", myAnswer);
     localStorage.setItem("myAnswer", JSON.stringify(myAnswer));
-    history.push(
-      currStep === maxQuestionNum
-        ? { pathname: "/result", state: myAnswer }
-        : `${currStep + 1}`
-    );
+    history.push(currStep === maxQuestionNum ? "/result" : `${currStep + 1}`);
   };
   return (
     <div className="Test">
