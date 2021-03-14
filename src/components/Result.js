@@ -7,6 +7,7 @@ const Result = () => {
   const arrName = ["top", "mid", "jungle", "bottom", "support"];
   const arrNum = [];
   let myPositions = [];
+  let isFullAnswer = 0; //1, 0, -1
 
   for (let stepNum in myAnswer) {
     if (myAnswer[stepNum]) {
@@ -19,43 +20,40 @@ const Result = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const sortFunc = (a, b) => {
-    if (a > b) {
-      return -1;
-    }
-    if (a === b) {
-      return 0;
-    }
-    if (a < b) {
-      return 1;
-    }
+    if (a > b) return -1;
+    if (a === b) return 0;
+    if (a < b) return 1;
   };
   const sortName = (a, b) => {
-    if (position[a] > position[b]) {
-      return -1;
-    }
-    if (position[a] === position[b]) {
-      return 0;
-    }
-    if (position[a] < position[b]) {
-      return 1;
-    }
+    if (position[a] > position[b]) return -1;
+    if (position[a] === position[b]) return 0;
+    if (position[a] < position[b]) return 1;
   };
   for (let i = 0; i < arrName.length; i++) {
     arrNum[i] = position[arrName[i]];
   }
   arrNum.sort(sortFunc);
   arrName.sort(sortName);
-  arrNum.map((v, i) => {
-    if (arrNum[0] === v) {
-      myPositions.push(arrName[i]);
-    }
-    //모든 포지션 4일 경우
-    //모든 포지션 0일 경우
-  });
+
+  const positionCountSum = arrNum.reduce((acc, v) => (acc += v));
+  if (positionCountSum === 20) {
+    isFullAnswer = 1;
+    console.log(isFullAnswer);
+  } else if (positionCountSum === 0) {
+    isFullAnswer = 0;
+    console.log(isFullAnswer);
+  } else {
+    isFullAnswer = -1;
+    arrNum.forEach((v, i) => {
+      if (arrNum[0] === v) {
+        myPositions.push(arrName[i]);
+      }
+    });
+  }
   console.log(myPositions);
 
   return (
-    <div>
+    <div className="Result">
       <h4>position : {JSON.stringify(position)}</h4>
       <br />
       <h4>
