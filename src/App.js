@@ -4,10 +4,14 @@ import Test from "./components/Test";
 import Result from "./components/Result";
 import Error from "./components/Error";
 import "./shared/reset.scss";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>리액트 헬멧을 이용한 타이틀 변경</title>
+      </Helmet>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
