@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <title>리액트 헬멧을 이용한 타이틀 변경</title>
+        <title>롤 포지션 테스트</title>
       </Helmet>
       <BrowserRouter>
         <Switch>

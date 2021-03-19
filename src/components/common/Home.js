@@ -22,11 +22,6 @@ const useStyles2 = makeStyles({
     display: "inline-block",
     width: "160px",
   },
-  notice: {
-    fontSize: "12px",
-    margin: "5px 0",
-    color: "#0d58ff",
-  },
 });
 
 const Home = () => {
@@ -53,9 +48,6 @@ const Home = () => {
           />
         </Box>
         <Box px={5} my={5}>
-          <p className={classes2.notice}>
-            평소 자신의 플레이 스타일에 가까운 답변을 선택해주세요 :)
-          </p>
           <Button variant="contained" className={classes.button}>
             <Link to="/test/1" className={classes2.link}>
               시작하기
