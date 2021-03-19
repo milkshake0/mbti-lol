@@ -9,9 +9,9 @@ import { Helmet } from "react-helmet";
 function App() {
   return (
     <div className="App">
-      <Helmet>
+      {/* <Helmet>
         <title>롤 포지션 테스트</title>
-      </Helmet>
+      </Helmet> */}
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />

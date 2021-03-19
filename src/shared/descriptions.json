@@ -5,6 +5,30 @@
         "title": "TOP",
         "desc": "탑"
       }
+    },
+    {
+      "jungle": {
+        "title": "JUNGLE",
+        "desc": ""
+      }
+    },
+    {
+      "mid": {
+        "title": "MID",
+        "desc": ""
+      }
+    },
+    {
+      "bottom": {
+        "title": "BOTTOM",
+        "desc": ""
+      }
+    },
+    {
+      "support": {
+        "title": "SUPPORT",
+        "desc": ""
+      }
     }
   ]
 }
