@@ -4,7 +4,7 @@ import Test from "./components/Test";
 import Result from "./components/Result";
 import Error from "./components/Error";
 import "./shared/reset.scss";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 function App() {
   return (

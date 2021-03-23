@@ -9,6 +9,8 @@ import { useStyles } from "../shared/style";
 const useStyles2 = makeStyles({
   container: {
     padding: "40px",
+    height: "auto",
+    minHeight: "600px",
   },
   link: {
     display: "inline-block",
@@ -27,6 +29,10 @@ const useStyles2 = makeStyles({
   title: {
     textAlign: "center",
     marginBottom: "40px",
+  },
+  shareBtn: {
+    textAlign: "center",
+    marginTop: "30px",
   },
 });
 
@@ -172,7 +178,6 @@ const Result = () => {
               ))}
               (이)에요!
             </Typography>
-            <Box></Box>
           </>
         )}
         <Box className={classes2.chartBox}>
@@ -185,6 +190,10 @@ const Result = () => {
             </Link>
           </Button>
         </Box>
+        {/* test페이지에서 에서 라우트로 넘어올 때 addthis 스크립트 파일이 안불러와지는 문제 */}
+        <Box
+          className={`addthis_inline_share_toolbox_grka ${classes2.shareBtn}`}
+        />
       </Container>
     </div>
   );
