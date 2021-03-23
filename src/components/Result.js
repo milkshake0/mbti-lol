@@ -9,8 +9,8 @@ import { useStyles } from "../shared/style";
 const useStyles2 = makeStyles({
   container: {
     padding: "40px",
-    height: "auto",
-    minHeight: "600px",
+    // height: "auto",
+    // minHeight: "600px",
   },
   link: {
     display: "inline-block",
