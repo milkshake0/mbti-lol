@@ -6,7 +6,7 @@
 ![lolposition1](https://user-images.githubusercontent.com/77560344/116828985-11d18d00-abdd-11eb-89c0-36c4bc56ac40.PNG)
 
 ## Link
-[https://mylolposition.netlify.app/](url)
+https://mylolposition.netlify.app/
 
 ## How to run
 
